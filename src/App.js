@@ -16,7 +16,16 @@ function App(){
     if(!name){
       showAlert(true, "danger", "Please enter a value.")
     }else if(name && isEditing){
-      // alert and edit
+      showAlert(true, "success", "Item edited.");
+      setName(list.map(item=>{
+        if(item.id === editId){
+          item.title = name;
+          return item.title;
+        }
+      }))
+      setName("");
+      setEditId(null);
+      setIsEditing(false);
     }else{
       showAlert(true, "success", "New item added to the list.")
       const randomId = Math.floor(new Date().getTime() * Math.random());
@@ -36,6 +45,12 @@ function App(){
     showAlert(true, "danger", `${title} removed.`);
     setList(list.filter(item => item.id !== id));
   }
+  const editItem = (id) => {
+    const item = list.find(item=>item.id === id);
+    setEditId(id);
+    setIsEditing(true);
+    setName(item.title);
+  }
 
   return (
     <section className="section-container">
@@ -50,7 +65,7 @@ function App(){
       </form>
       {list.length > 0 && (
       <div className="grocery-container">
-        <List items={list} removeItem={removeItem}/>
+        <List items={list} removeItem={removeItem} editItem={editItem}/>
         <button className="clear-btn" onClick={clearList}>Clear items</button>
       </div>
 
