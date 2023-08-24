@@ -32,11 +32,15 @@ function App(){
     showAlert(true, "danger", "Your list is empty now.");
     setList([]);
   }
+  const removeItem = (id) => {
+    showAlert(true, "danger", "Item removed.");
+    setList(list.filter(item => item.id !== id));
+  }
 
   return (
     <section className="section-container">
       <form className="grocery-form" onSubmit={handleSubmit}>
-        {alert.show && <Alert {...alert} removeAlert={showAlert}/>}
+        {alert.show && <Alert {...alert} removeAlert={showAlert} list={list}/>}
       <h3 className="title">Grocery List</h3>
       <div className="form-control">
         <input type="text" placeholder="e.g. Pencil Box" value={name} onChange={(e)=>setName(e.target.value)}/>
@@ -46,7 +50,7 @@ function App(){
       </form>
       {list.length > 0 && (
       <div className="grocery-container">
-        <List items={list}/>
+        <List items={list} removeItem={removeItem}/>
         <button className="clear-btn" onClick={clearList}>Clear items</button>
       </div>
 
