@@ -14,7 +14,7 @@ function List({items, removeItem}) {
               <button className="edit-btn" type='button'>
                 <FaEdit/>
               </button>
-              <button className="delete-btn" type='button' onClick={()=>removeItem(id)}>
+              <button className="delete-btn" type='button' onClick={()=>removeItem(id, title)}>
                 <FaTrash/>
               </button>
             </div>

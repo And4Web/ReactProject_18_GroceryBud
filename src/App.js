@@ -32,8 +32,8 @@ function App(){
     showAlert(true, "danger", "Your list is empty now.");
     setList([]);
   }
-  const removeItem = (id) => {
-    showAlert(true, "danger", "Item removed.");
+  const removeItem = (id, title) => {
+    showAlert(true, "danger", `${title} removed.`);
     setList(list.filter(item => item.id !== id));
   }
 
