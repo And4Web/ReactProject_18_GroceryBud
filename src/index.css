@@ -59,12 +59,12 @@ code {
   box-shadow: 1px 1px 1px rgb(248, 180, 180), inset 1px 1px 1px rgb(247, 116, 116);  
   
 }
-.list-container{
-  /* border: 1px solid black; */
+/* .list-container{
+  border: 1px solid black;
   border-radius: 10px;
   padding: 0 1rem;
   box-shadow: 1px 1px 5px grey;
-}
+} */
 input{
   outline: none;
   border: 1px solid rgb(192, 190, 190);
@@ -90,4 +90,36 @@ input{
 }
 .submit-btn:active{  
   transform: scale(.98);  
+}
+.grocery-item{
+  /* border: 1px solid black; */
+  border-bottom: 1px solid black;
+  padding: .5rem 1rem 0;
+  border-radius: 5px;
+  margin: .5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.grocery-title{
+  text-align: center;  
+  color: blueviolet;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.btn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.edit-btn, .delete-btn{
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+.edit-btn{
+  color: rgb(25, 171, 25);
+}
+.delete-btn{
+  color: red;
 }

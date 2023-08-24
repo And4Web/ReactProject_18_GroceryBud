@@ -13,7 +13,17 @@ function App(){
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("form submitted.");
-    console.log(name)
+    if(!name){
+      // alert
+    }else if(name && isEditing){
+      // alert and edit
+    }else{
+      // show alert
+      const randomId = Math.floor(new Date().getTime() * Math.random());
+      const newItem = {id: randomId.toString(), title: name};
+      setList([...list, newItem]);
+      setName("")
+    }    
   }
 
   return (
@@ -28,7 +38,7 @@ function App(){
 
       </form>
       <div className="grocery-container">
-        <List />
+        <List items={list}/>
         <button className="clear-btn">Clear items</button>
       </div>
     </section>
