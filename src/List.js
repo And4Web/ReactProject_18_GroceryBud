@@ -3,12 +3,9 @@ import {FaEdit, FaTrash} from 'react-icons/fa'
 
 function List() {
   return (
-    <div>
+    <div className='list-container'>
       <h1>List Component</h1>
-      <div>
-        <FaEdit/>
-        <FaTrash/>
-      </div>
+      
     </div>
   )
 }

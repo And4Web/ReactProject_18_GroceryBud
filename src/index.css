@@ -5,9 +5,89 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.title{
+  text-align: center;
+  text-decoration: underline;
+  color: purple;
+  font-size: 2rem;
+}
+.section-container{
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  margin: 1rem;
+  padding: .5rem 1rem 1rem;
+  box-shadow: 1px 1px 5px grey;
+}
+.grocery-container{
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+  /* border: 1px solid black; */
+  padding: .5rem;
+}
+.clear-btn{
+  border: none;
+  background-color: transparent;
+  color: red;
+  font-size: .8rem;
+  font-weight: 700;
+  border-radius: 5px;
+  /* border: 1px solid red; */
+  height: 1.5rem;
+  box-shadow: 1px 1px 1px rgb(247, 116, 116), inset 1px 1px 1px rgb(248, 180, 180);
+}
+.clear-btn:hover{
+  cursor: pointer;
+}
+.clear-btn:active{
+  
+  transform: scale(.99);
+  box-shadow: 1px 1px 1px rgb(248, 180, 180), inset 1px 1px 1px rgb(247, 116, 116);  
+  
+}
+.list-container{
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  padding: 0 1rem;
+  box-shadow: 1px 1px 5px grey;
+}
+input{
+  outline: none;
+  border: 1px solid rgb(192, 190, 190);
+  margin-right: .5rem;
+  padding: .5rem;
+  border-radius: 5px;
+}
+.submit-btn{
+  outline: none;
+  border: none;
+  background-color: lightgreen;
+  color: green;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 5px;
+  /* border: 1px solid red; */
+  height: 2rem;
+  padding: 0 1rem;
+  
+}
+.submit-btn:hover{
+  cursor: pointer;
+}
+.submit-btn:active{  
+  transform: scale(.98);  
 }
